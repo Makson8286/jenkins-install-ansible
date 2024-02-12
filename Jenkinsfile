@@ -15,15 +15,15 @@ pipeline  {
         stage("Git clone") {
             steps {
                 sh '''
-                cd /home/an/
-                git clone https://github.com/Makson8286/ansible.jen         
+                cd /your-path/
+                git clone https://github.com/Makson8286/jenkins-install-ansible      
                 '''
             }
         }    
         stage("Build") {
             steps {
                 sh '''
-                cd /home/an/ansible.jen/Ansible
+                cd /your-path/jenkins-install-ansible/Ansible
                 docker build -t makson8286/ansible .
                 '''
             }
